@@ -28,6 +28,5 @@ def save_to_db(person):
 def update_db(person):
     with open("db/db.json", "w") as file:
         json.dump(person, file)
-        # json.dump(people, open('db/db.json','w'))
                 
     

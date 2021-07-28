@@ -44,20 +44,19 @@ elif action_type == "3":
             if new_data == "1":
                 new_name = input("Please, add person new name: ")
                 person["name"] = new_name
-                update_db(person)
+                print(texts["action_create_success"])
                 print(f'Name: {person["name"]} , Surname: {person["surname"]}, Number: {person["number"]}')
             elif new_data == "2":
                 new_surname = input("Please, add person new surname: ")
                 person["surname"] = new_surname
-                update_db(person)
                 print(texts["action_create_success"])
                 print(f'Name: {person["name"]} , Surname: {person["surname"]}, Number: {person["number"]}')
             elif new_data == "3":
                 new_number = input("Please, add person new number: ")
                 person["number"] = new_number
-                update_db(person)
                 print(texts["action_create_success"])
                 print(f'Name: {person["name"]} , Surname: {person["surname"]}, Number: {person["number"]}')
+            update_db(people)
 
 elif action_type == "4":
     person_name=input("Please, enter name which you want to delete: ")
